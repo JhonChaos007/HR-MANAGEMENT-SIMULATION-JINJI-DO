@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR MASTER - 遊び方・マニュアル</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.4s ease-out forwards;
+        }
+        .yuji-font {
+            font-family: 'Yuji Syuku', serif;
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans custom-scrollbar antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-700 shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🏢</span>
+                <div>
+                    <h1 class="text-2xl font-black text-white yuji-font tracking-widest drop-shadow-md">人事道</h1>
+                    <p class="text-[10px] text-indigo-400 font-bold tracking-[0.2em] uppercase">Official Manual</p>
+                </div>
+            </div>
+            <a href="#" onclick="window.close();" class="text-sm font-bold text-slate-400 hover:text-white transition-colors flex items-center gap-1 bg-slate-800 px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500">
+                <span>✕</span> 閉じる
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- 1. Mission -->
+        <section class="animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="bg-gradient-to-br from-indigo-900 to-slate-800 rounded-2xl p-8 border border-indigo-500/30 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500 opacity-5 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                <h2 class="text-xl text-indigo-400 font-black mb-2 tracking-widest flex items-center gap-2">
+                    <span class="text-2xl">🎯</span> MISSION
+                </h2>
+                <h3 class="text-3xl font-bold text-white mb-4">5年間のサバイバル、目指せ株式上場</h3>
+                <p class="text-slate-300 leading-relaxed font-medium">
+                    プレイヤーは企業の人事・経営責任者として、<strong class="text-white bg-indigo-500/20 px-1 rounded">240週（5年間）</strong>にわたり組織を運営します。<br>
+                    採用、教育、労務管理、そして新規事業の開発…。限られた資金とターンをやりくりし、幾多のトラブルを乗り越えて会社を成長させてください。<br>
+                    最終的な「累積利益」と「組織の健全性」によって、会社のエンディング（評価）が決定します。
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Game Flow -->
+        <section class="animate-slide-up" style="animation-delay: 0.2s;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <span class="text-emerald-400">🔄</span> 基本のサイクル
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 relative">
+                    <div class="absolute -top-3 -left-3 w-8 h-8 bg-emerald-600 text-white font-black rounded-full flex items-center justify-center border-4 border-slate-900 shadow-md">1</div>
+                    <h4 class="font-bold text-emerald-400 mb-2 mt-2">コマンド選択</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">画面下部のコマンド（採用、教育、面談など）を1つ選択します。実行すると<strong class="text-white">1週間（1ターン）が経過</strong>します。</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 relative">
+                    <div class="absolute -top-3 -left-3 w-8 h-8 bg-emerald-600 text-white font-black rounded-full flex items-center justify-center border-4 border-slate-900 shadow-md">2</div>
+                    <h4 class="font-bold text-emerald-400 mb-2 mt-2">業務進行・ストレス</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">ターン経過と共に、アサインされたプロジェクトが進行します。同時に社員には<strong class="text-red-400">ストレスが蓄積</strong>されます。</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 relative">
+                    <div class="absolute -top-3 -left-3 w-8 h-8 bg-emerald-600 text-white font-black rounded-full flex items-center justify-center border-4 border-slate-900 shadow-md">3</div>
+                    <h4 class="font-bold text-emerald-400 mb-2 mt-2">イベント発生</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">ランダムで様々なイベントやトラブル（労基監査、炎上、引き抜き等）が発生。あなたの判断が求められます。</p>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 relative">
+                    <div class="absolute -top-3 -left-3 w-8 h-8 bg-emerald-600 text-white font-black rounded-full flex items-center justify-center border-4 border-slate-900 shadow-md">4</div>
+                    <h4 class="font-bold text-emerald-400 mb-2 mt-2">月次決算</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">4ターン（1ヶ月）ごとに決算が発生。<strong class="text-white">給与や政策維持費</strong>が引き落とされます。資金ショートに注意！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Parameters -->
+        <section class="animate-slide-up" style="animation-delay: 0.3s;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <span class="text-blue-400">📊</span> 組織パラメータ
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-green-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-green-400 mb-1 flex justify-between">資金 (Funds) <span>💰</span></h4>
+                    <p class="text-xs text-slate-400">会社の血液。これが<strong class="text-red-400">ゼロ未満になると即ゲームオーバー（倒産）</strong>です。毎月の固定費に注意。</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-blue-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-blue-400 mb-1 flex justify-between">士気 (Morale) <span>🔥</span></h4>
+                    <p class="text-xs text-slate-400">社員のモチベーション。低いと離職率が上がり、ストライキなどの労務トラブルが発生しやすくなります。</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-emerald-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-emerald-400 mb-1 flex justify-between">順法 (Compliance) <span>⚖️</span></h4>
+                    <p class="text-xs text-slate-400">法令遵守の意識。低いと労基の監査や訴訟トラブルで甚大な金銭的・社会的ダメージを受けます。</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-purple-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-purple-400 mb-1 flex justify-between">評判 (Reputation) <span>🌟</span></h4>
+                    <p class="text-xs text-slate-400">業界内の会社のブランド力。高いとコンペの勝率が上がり、製品の売上にもプラスの補正がかかります。</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-yellow-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-yellow-500 mb-1 flex justify-between">社運 (Luck) <span>🎲</span></h4>
+                    <p class="text-xs text-slate-400">見えない運の力。高いとポジティブなイベントが起きやすく、致命的なトラブルを回避できることがあります。</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border-l-4 border-red-500 shadow-sm hover:bg-slate-750 transition-colors">
+                    <h4 class="font-black text-red-500 mb-1 flex justify-between">炎上度 (Flame) <span>🚨</span></h4>
+                    <p class="text-xs text-slate-400">SNSでの炎上具合。放置すると<strong class="text-red-400">毎月多額の損害賠償</strong>が発生し、採用時の候補者も集まらなくなります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Commands -->
+        <section class="animate-slide-up" style="animation-delay: 0.4s;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <span class="text-amber-400">🎮</span> メインコマンド
+            </h2>
+            <div class="space-y-4">
+                
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center text-3xl shrink-0 border border-slate-600 shadow-inner">📝</div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">採用・面接</h4>
+                        <p class="text-sm text-slate-400 mb-2">ハローワークやエージェント経由で候補者を集め、面接を行います。面接では質問に対する回答から候補者の「真の能力」や「隠された性格」を見抜く必要があります。</p>
+                        <div class="bg-amber-900/30 border border-amber-700/50 p-3 rounded-lg text-xs text-amber-200">
+                            <strong class="text-amber-400">面接のコツ：</strong> 「Why?（深掘り）」コマンドを使うと、嘘を暴ける確率が上がります。しかし、深掘りしすぎると候補者が激昂して面接が強制終了するリスクがあります。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center text-3xl shrink-0 border border-slate-600 shadow-inner">🗣️</div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">面談 / 個別アクション (1on1)</h4>
+                        <p class="text-sm text-slate-400 mb-2">社員の<strong class="text-red-400">ストレス管理は本作の最重要要素</strong>です。ストレスが80%を超えると反抗的になり、100%で退職・休職の危険があります。全体面談のほか、社員名簿から個別の「1on1」や「昇給」でケアしましょう。</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center text-3xl shrink-0 border border-slate-600 shadow-inner">📦</div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">自社製品開発</h4>
+                        <p class="text-sm text-slate-400 mb-2">受託プロジェクト（コンペ）だけでなく、自社で製品を開発できます。多額の初期投資と高い開発力が必要ですが、<strong class="text-emerald-400">一度完成すれば毎月の固定収益（チャリンチャリンビジネス）</strong>となり、経営が劇的に安定します。</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center text-3xl shrink-0 border border-slate-600 shadow-inner">📜</div>
+                    <div>
+                        <h4 class="font-bold text-white text-lg mb-1">政策・広報</h4>
+                        <p class="text-sm text-slate-400 mb-2">
+                            <strong class="text-white">政策：</strong>福利厚生や人事制度を導入します。強力な恩恵がありますが「毎月の維持費」がかかるため、資金ショートの要因になりがちです。<br>
+                            <strong class="text-white">広報：</strong>SNS炎上時の「火消し」や、広告による評判アップを行います。（※事前に政策で「広報部」の設立が必要）
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. Win / Lose -->
+        <section class="animate-slide-up" style="animation-delay: 0.5s;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <span class="text-rose-400">🏁</span> 勝利・敗北条件
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800 border-t-4 border-red-500 rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-black text-red-500 mb-4 flex items-center gap-2"><span class="animate-pulse">💀</span> 敗北（ゲームオーバー）</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 font-bold">▶</span>
+                            <div><strong class="text-white">資金のショート（倒産）</strong><br>月次決算や損害賠償で資金がマイナスになると即座に倒産します。</div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-500 font-bold">▶</span>
+                            <div><strong class="text-white">全社員の退職（組織崩壊）</strong><br>ストレスや炎上で社員が全員去ってしまった場合、事業継続不可となります。</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800 border-t-4 border-yellow-500 rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-black text-yellow-500 mb-4 flex items-center gap-2"><span>🏆</span> 勝利（エンディング）</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-yellow-500 font-bold">▶</span>
+                            <div><strong class="text-white">240週（5年間）の完遂</strong><br>倒産せずに5年間生き残ればクリアとなります。</div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-yellow-500 font-bold">▶</span>
+                            <div><strong class="text-white">最終評価</strong><br>最終ターン終了時の「累積利益」「士気」「順法」などのパラメータに応じて、10種類以上の異なるエンディング（メガベンチャー上場、ブラック企業化など）に分岐します。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Tips -->
+        <section class="animate-slide-up" style="animation-delay: 0.6s;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <span class="text-indigo-400">💡</span> 攻略のコツ・TIPS
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-lg flex items-start gap-3">
+                    <div class="text-2xl mt-1">🧑‍⚖️</div>
+                    <div>
+                        <h4 class="font-bold text-indigo-300 mb-1">バックオフィス（法務・経理・広報）を軽視しない</h4>
+                        <p class="text-sm text-slate-300">開発や営業だけでは会社は守れません。<strong>法務</strong>がいれば理不尽な訴訟や労務トラブルのダメージを大幅に軽減でき、<strong>経理</strong>は毎月の無駄な経費を削減し税務調査を跳ね除けます。<strong>広報</strong>は炎上を鎮める唯一の手段です。</p>
+                    </div>
+                </div>
+
+                <div class="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-lg flex items-start gap-3">
+                    <div class="text-2xl mt-1">⚠️</div>
+                    <div>
+                        <h4 class="font-bold text-indigo-300 mb-1">「デスマーチ」は劇薬</h4>
+                        <p class="text-sm text-slate-300">プロジェクトの進捗が間に合わない場合、「デスマーチ」を指示すると開発スピードが2倍になります。しかし、社員のストレスが激増し、製品リリース後に<strong>多額の損害を生む「バグ爆弾」のリスク</strong>が蓄積されます。乱用は厳禁です。</p>
+                    </div>
+                </div>
+
+                <div class="bg-indigo-900/20 border border-indigo-500/30 p-4 rounded-lg flex items-start gap-3">
+                    <div class="text-2xl mt-1">💸</div>
+                    <div>
+                        <h4 class="font-bold text-indigo-300 mb-1">よくある「NGプレイ」</h4>
+                        <p class="text-sm text-slate-300">
+                            <strong>固定費の膨張：</strong>序盤に手持ちの資金ギリギリまで採用したり、高額な福利厚生政策を導入したりすると、月末の決算で人件費・維持費が払えずに<span class="text-red-400 font-bold">1ヶ月目で即倒産</span>します。常に「数ヶ月は耐えられるキャッシュ」を残しましょう。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center pt-8 pb-4 border-t border-slate-800 mt-12">
+            <p class="text-xs text-slate-500 font-bold tracking-widest">GOOD LUCK, HR MANAGER.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
